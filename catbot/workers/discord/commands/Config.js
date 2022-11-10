@@ -2,30 +2,30 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('config')
-		.setDescription('Configuration commands for catbot-9000')
+		.setDescription('Configuration commands for NFT Battle Field')
 		.addSubcommandGroup(
 			group => group
 				.setName('check')
-				.setDescription('Check catbot-9000\'s configuration and functionality')
+				.setDescription('Check NFT Battle Field\'s configuration and functionality')
 				.addSubcommand(
 					command => command
 						.setName('permissions')
-						.setDescription('Check catbot-9000\'s permissions configuration')
+						.setDescription('Check NFT Battle Field\'s permissions configuration')
 						.addChannelOption(channel => channel
 							.setName('channel')
 							.setDescription('The channel for which permissions should be checked. Uses current channel if left blank'))))
 		.addSubcommandGroup(
 			group => group
 				.setName('setup')
-				.setDescription('Configure catbot-9000 using step-by-step guides')
+				.setDescription('Configure NFT Battle Field using step-by-step guides')
 				.addSubcommand(
 					command => command
 						.setName('all')
-						.setDescription('Guided setup of all catbot-9000 functionality'))
+						.setDescription('Guided setup of all NFT Battle Field functionality'))
 				.addSubcommand(
 					command => command
 						.setName('permissions')
-						.setDescription('Guided setup of permissions needed for catbot-9000'))),
+						.setDescription('Guided setup of permissions needed for NFT Battle Field'))),
 	customName: 'ConfigCommand',
 	async execute(interaction) {
 		await interaction.reply({ content:'Under construction', ephemeral: true });
